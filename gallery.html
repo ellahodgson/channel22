@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel 22</title>
+    <link rel="icon" href="icons/hearts.svg">
+    <!--This is the bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Bootstrap icons link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!--This is my custom CSS-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+    <body style="overflow-x: hidden; padding-top: 60px;">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top navContent">
+            <div class="container-fluid">
+                <a class="navbar-brand navAnchorLogo" href="index.html">CHANNEL 22</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link navAnchor" href="index.html">HOME</a>
+                      <a class="nav-link navAnchor" href="meet_the_prefects.html">MEET THE PREFECTS</a>
+                      <a class="nav-link navAnchor" href="initiatives.html">INITIATIVES</a>
+                      <a class="nav-link navAnchor" href="videos.html">VIDEOS</a>
+                      <a id="active" class="nav-link navAnchor" aria-current="page" href="gallery.html">GALLERY</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+            
+        <div class="container-fluid m-0 p-0">
+            <div class="row">
+                <div class="col">
+                    <div class="myHero">Gallery</div>
+                </div>
+            </div>
+
+          <div id="app-gallery">
+            <div class="row justify-content-center">
+                <h3 class="pt-4 ps-5">Valentines Day</h3>
+
+                <div id="carouselExampleInterval1" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img src="images/channel_22_galleries/Valentines/DSC_3536.jpg" class="image-fluid mx-auto d-block heightImage" alt="Picture from Valentines Day Archway">
+                    </div>
+                    <div v-for="item in filteredValentinesDay"> 
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img class="image-fluid mx-auto d-block heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval1" data-bs-slide="next">
+                      <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+                
+                <cite class="text-center">Photos taken by Lily Knox</cite>
+                <a class="linkGallery" href="https://drive.google.com/drive/folders/1zFPpT5W4FLNg0gPAHiFDtXTwsWdh0f9A?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+           
+              </div>
+
+            <div class="row justify-content-center backgroundB">
+                <h3 class="pt-4 ps-5">International Women’s Day</h3>
+                    
+                <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img src="images/channel_22_galleries/IWD/DSC_4597.jpg" class="image-fluid mx-auto d-block heightImage" alt="Picture from International Women's Day Archway">
+                    </div>
+                    <div v-for="item in filteredIWD"> 
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img class="image-fluid mx-auto d-block heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
+                      <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+            
+                <cite class="text-center">Photos taken by Lily Knox</cite>
+                <a class="linkGallery" href="https://drive.google.com/drive/folders/1RrMN6OeGoC3JNyX6ifcDQGeRHcE2Nk_s?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+            </div>
+
+            <div class="row">
+                <h3 class="pt-4 ps-5">Chalk Art - Term 1</h3>
+                  
+                <div id="carouselExampleInterval3" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img src="images/channel_22_galleries/Chalk_Art_T1/DSC_3690-(1).jpg" class="image-fluid mx-auto d-block heightImage" alt="Picture from Valentines Day Archway">
+                    </div>
+                    <div v-for="item in filteredChalkArt"> 
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img class="image-fluid mx-auto d-block heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="next">
+                      <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+            
+                <cite class="text-center">Photos taken by Lily Knox</cite>
+                <a class="linkGallery" href="https://drive.google.com/drive/folders/124DwNKMVPhTk9Zq7Y7FD0cmer9Wg2Oel?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+
+            </div>
+
+            <div class="row backgroundB">
+                <h3 class="pt-4 ps-5">End of Term 1 Easter celebrations!</h3>
+                    
+                <div id="carouselExampleInterval4" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img src="images/channel_22_galleries/Last_Week_of_Term:Easter/DSC_5104.jpg" class="image-fluid mx-auto d-block heightImage" alt="Picture from Pink Shirt Day">
+                    </div>
+                    <div v-for="item in filteredEaster"> 
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img class="image-fluid mx-auto d-block heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval4" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval4" data-bs-slide="next">
+                      <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>
+            
+                <cite class="text-center">Photos taken by Lily Knox</cite>
+                <a class="linkGallery" href="https://drive.google.com/drive/folders/1a4ulC9-iMNggq8wzvFopwU5nJEkgRvH0?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+           
+            </div>
+
+            <div class="row">
+              <h3 class="pt-4 ps-5">Pink Shirt Day</h3>
+                  
+              <div id="carouselExampleInterval5" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="images/channel_22_galleries/Pink_Shirt_Day/Pink_Shirt_Day1.jpg" class="image-fluid mx-auto d-block heightImage" alt="Picture from Pink Shirt Day">
+                  </div>
+                  <div v-for="item in filteredPSD"> 
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img class="image-fluid mx-auto d-block heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                    </div>
+                  </div> 
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval5" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval5" data-bs-slide="next">
+                    <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>   
+            
+              <cite class="text-center">Photos taken by Lily Knox</cite>
+              <a class="linkGallery" href="https://drive.google.com/drive/folders/133GGXzahdxazn9qjzgrDRpjrM7b2MwTa?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+           
+            </div>
+
+            <div class="row backgroundB">
+                <h3 class="pt-4 ps-5">Angel Day</h3>
+
+                <div id="carouselExampleInterval6" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                      <img src="images/channel_22_galleries/Angel_Day/DSC_7520.jpg" class="d-block image-fluid mx-auto heightImage" alt="Picture from Angel Day Archway">
+                    </div>
+                    <div v-for="item in filteredAngelDay"> 
+                      <div class="carousel-item" data-bs-interval="5000">
+                        <img class="d-block image-fluid mx-auto heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="next">
+                      <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>      
+            
+                <cite class="text-center">Photos taken by Lily Knox</cite>
+                <a class="linkGallery" href="https://drive.google.com/drive/folders/1rQTOqTrXEZ954ftUlpH_oh4oIZ9kI26c?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+           
+            </div>
+
+            <div class="row">
+              <h3 class="pt-4 ps-5">End of Term 2 - Hot Chocolates</h3>
+
+              <div id="carouselExampleInterval7" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="images/channel_22_galleries/Hot_Chocolate_Term_2/DSC_7852.jpg" class="d-block image-fluid mx-auto heightImage" alt="Picture from End of Term 2 Hot Chocolate Suprise">
+                  </div>
+                  <div v-for="item in filteredHotChocolates"> 
+                    <div class="carousel-item" data-bs-interval="5000">
+                      <img class="d-block image-fluid mx-auto heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval7" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval7" data-bs-slide="next">
+                    <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>      
+          
+              <cite class="text-center">Photos taken by Lily Knox</cite>
+              <a class="linkGallery" href="https://drive.google.com/drive/folders/1aRVMouw2XQejW6FPYz-Bf5q0uxY3kLJL?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+         
+          </div>
+
+            <div class="row justify-content-center">
+                <h3 class="text-center p-5">Stayed tuned! More photos will be added as the year goes on</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid m-0 p-0">
+            <div class="row justify-content-center myFooter">
+                <div class="col-3 col-lg-3 col-xl-2 d-flex justify-content-center">
+                    <div class="footerContent">
+                      <a href="index.html" class="text-decoration-none"><h2 class="p-0 m-0">22</h2></a>
+                    </div>
+                </div>
+    
+                <div class="col-7 col-lg-6 col-xl-8 d-flex justify-content-center">
+                    <div class="footerContent"><h3 class="p-0 pt-2 m-0">Follow Us - <a href="https://www.instagram.com/sthildascollegiate/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>   <a href="https://www.facebook.com/SHCSNZ/" target="_blank"><i class="bi bi-facebook"></i></a>    <a href="https://vt.tiktok.com/ZSdq7QqYm/" target="_blank"><i class="bi bi-tiktok"></i></a></h3>
+                    </div>
+                </div>
+                <div class="col-2 col-lg-3 col-xl-2 d-flex justify-content-center">
+                    <div class="footerContent"><a href="#top"><i class="bi bi-arrow-up-circle-fill"></i></a></div>
+                </div>
+            </div>
+        </div>  
+    </body>
+
+    <!--Bootstrap Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- JS for VUE and Airtable -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+    <!-- Custom JS-->
+    <script src="gallery_vue.js"></script>
+</html>

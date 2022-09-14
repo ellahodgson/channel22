@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel 22</title>
+    <link rel="icon" href="icons/hearts.svg">
+    <!--This is the bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Bootstrap icons link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!--This is my custom CSS-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+    <body style="overflow-x: hidden; padding-top: 60px;">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top navHome">
+            <div class="container-fluid">
+                <a class="navbar-brand navAnchorLogo" href="index.html">CHANNEL 22</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end navCollapseIcon" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link navAnchor" href="index.html">HOME</a>
+                      <a id="active" class="nav-link navAnchor" aria-current="page" href="meet_the_prefects.html">MEET THE PREFECTS</a>
+                      <a class="nav-link navAnchor" href="initiatives.html">INITIATIVES</a>
+                      <a class="nav-link navAnchor" href="videos.html">VIDEOS</a>
+                      <a class="nav-link navAnchor" href="gallery.html">GALLERY</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid m-0 p-0">
+            <a href="#top" title="Return to top"><i class="bi bi-arrow-up-circle-fill jump-to-top"></i></i></a>
+            <div class="row">
+                <div class="col channelPage">
+                    <div class="myHero">Meet the Prefects</div>
+                </div>
+            </div>
+        </div>
+
+      <div id="app-prefects1">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center py-3 px-5 g-5">
+                <div v-for="item in items" :class="col">
+                  <div class="card h-100 border-light mx-auto myPrefectCard">
+                    <img class="card-img-top w-100" :src="item['fields']['imageURLA'][0]['url']" :alt="item['fields']['altText']"  :title="item['fields']['Alt']">
+                    <div class="card-body">
+                      <h5 class="card-title myCardTitle pb-2">{{ item['fields']['Heading'] }}</h5>
+                      <p class="card-text text-white myCardText">{{ item['fields']['Sub Heading'] }}</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                      <small class="text-muted"><a :href="item['fields']['linkID']" class="readMore mtp">Read More<i class="bi bi-arrow-right-short myArrow"></i></a></small>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+       </div>
+
+        <div class="container-fluid m-0 pt-5 pb-5">
+            <div class="row myBanner">
+                <div class="col-3 text-center">
+                    <h4>BE YOU</h4>
+                </div>
+                <div class="col-3 text-center">
+                    <h4>CAN DO</h4>
+                </div>
+                <div class="col-3 text-center">
+                    <h4>BETTER TOGETHER</h4>
+                </div>
+                <div class="col-3 text-center">
+                    <h4>EXPLORE FAITH</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="app-prefects2">
+            <div v-for="item in filteredPairs" :class="['row py-2 mx-2 justify-content-center']" :id="item['fields']['iD']">
+                <div class="col-10 col-md-8">
+                    <h3 class="pb-3">{{ item['fields']['Names'] }}</h3>
+                    <p style="white-space: pre-line">{{ item['fields']['Info'] }}</p>
+                </div>
+                <div class="col-10 col-md-4 ml-2">
+                    <div class="row">
+                        <div class="myProfileImage">
+                            <img class="w-100 h-auto p-0" :src="item['fields']['imageURLA'][0]['url']" :alt="item['fields']['altText']"  :title="item['fields']['Alt']">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="myProfileImage">
+                            <img class="w-100 h-auto p-0" :src="item['fields']['imageURLB'][0]['url']" :alt="item['fields']['altText']"  :title="item['fields']['Alt']">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div v-for="item in filteredIndividuals" :class="['row py-2 mx-2 my-3 justify-content-center']" :id="item['fields']['iD']">
+                <div class="col-10 col-md-8">
+                    <h3 class="pb-3">{{ item['fields']['Names'] }}</h3>
+                    <p style="white-space: pre-line">{{ item['fields']['Info'] }}</p>
+                </div>
+                <div class="col-10 col-md-4">
+                    <div class="row">
+                        <div class="myProfileImage">
+                            <img class="w-100 h-auto p-0" :src="item['fields']['imageURLB'][0]['url']" :alt="item['fields']['altText']"  :title="item['fields']['Alt']">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+      </div>
+
+        <div class="container-fluid m-0 p-0">
+            <div class="row justify-content-center myFooter">
+                <div class="col-3 col-lg-3 col-xl-2 d-flex justify-content-center">
+                    <div class="footerContent">
+                        <a href="index.html" class="text-decoration-none"><h2 class="p-0 m-0">22</h2></a>
+                    </div>
+                </div>
+    
+                <div class="col-7 col-lg-6 col-xl-8 d-flex justify-content-center">
+                    <div class="footerContent"><h3 class="p-0 pt-2 m-0">Follow Us - <a href="https://www.instagram.com/sthildascollegiate/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>   <a href="https://www.facebook.com/SHCSNZ/" target="_blank"><i class="bi bi-facebook"></i></a>    <a href="https://vt.tiktok.com/ZSdq7QqYm/" target="_blank"><i class="bi bi-tiktok"></i></a></h3>
+                    </div>
+                </div>
+                <div class="col-2 col-lg-3 col-xl-2 d-flex justify-content-center">
+                    <div class="footerContent"><a href="#top"><i class="bi bi-arrow-up-circle-fill"></i></a></div>
+                </div>
+            </div>
+        </div>  
+
+    </body>
+
+    <!--Bootstrap Script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- JS for VUE and Airtable -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+    <!-- Custom JS-->
+    <script src="prefects_vue.js"></script>
+</html>

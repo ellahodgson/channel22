@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Noto+Sans+Display:wght@600;900&family=Staatliches&display=swap');
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Noto Sans Display', sans-serif;
+font-family: 'Staatliches', cursive; */
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-size: 1rem;
+}
+
+html, body {
+    scroll-padding-top: 7rem;
+    min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #3e444e;
+    overflow-x: hidden;
+}
+
+h1{
+    color: #77DDF9;
+    font-size: 10vw;
+    padding: 0;
+    margin: 0;
+    font-family: 'Staatliches', cursive;
+}
+
+h2{
+    color: #77DDF9;
+    font-size: 8vw;
+    font-family: 'Staatliches', cursive;
+}
+
+h3{
+    color: #FFA0A3;
+    font-weight: bold;
+    font-size: 7vw;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+h4{
+    color: white;
+    font-size: 2.5vw;
+    font-family: 'Staatliches', cursive;
+}
+
+h5{
+    color: white;
+    font-size: 5vw;
+    font-family: 'Noto Sans Display', sans-serif;
+    font-weight: bold;
+}
+
+p{
+    color: #3e444e;
+}
+
+.myBox3{
+    margin: 20px 10px;
+    padding: 3vw;
+    padding-left: 0;
+}
+
+.myBox4{
+    background-color: rgb(146, 223, 159);
+    min-height: 350px;
+    border-radius: 5%;
+    margin: 20px 10px;
+    padding: 20px;
+}
+
+
+/* Nav - Home */
+.navTopHome{
+    display: none;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+}
+
+.introBox{
+    margin-top: 100px;
+}
+
+.navLeadHome{
+    min-height: 2vw;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navContentHome{
+    min-height: 0.9vw;
+    border: solid 3px #77DDF9;
+    padding: 1.8vh;
+    text-align: center;
+}
+
+.navAnchorHome{
+    font-family: 'Staatliches', cursive;
+    font-size: 2.8vw;
+    text-decoration: none;
+    color: #77DDF9;
+}
+
+.navAnchorHome:hover{
+    color: #FFA0A3;
+}
+
+.navHome{
+    z-index: 1;
+    background-color: white;
+    min-height: 0.8vw;
+    padding: 1.5vh;
+    text-decoration: none;
+    border-top: solid 0.6vh #77DDF9;
+    border-bottom: solid 0.7vh #77DDF9;
+}
+
+/* Nav - Normal */
+.navbar{
+    z-index: 4;
+}
+
+.navContent{
+    background-color: white;
+    min-height: 0.8vw;
+    padding: 1.5vh;
+    text-decoration: none;
+    border-top: solid 0.6vh #77DDF9;
+    border-bottom: solid 0.7vh #77DDF9;
+}
+
+/*Code to change color of active link*/
+.navbar-nav > #active {
+    color: #FFA0A3;
+}
+
+.bg-light .navbar-toggler{
+    color: #77DDF9;
+    border: solid 3px #77DDF9;
+}
+
+.bg-light .navbar-toggler-icon{
+    color: #77DDF9;
+}
+
+.navLogo{
+    min-height: 1vw;
+    padding: 1.5vh;
+    padding-left: 3vw;
+    text-decoration: none;
+}
+
+.navAnchorLogo{
+    font-family: 'Staatliches', cursive;
+    font-size: 7vw;
+    padding: 0;
+    padding-left: 2vw;
+    text-decoration: none;
+    color: #77DDF9;
+}
+
+.navAnchorLogo:hover{
+    color: #77DDF9;
+}
+
+.nav-link{
+    font-family: 'Staatliches', cursive;
+    font-size: 2.8vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    text-decoration: none;
+    color: #77DDF9;
+}
+
+.navAnchor{
+    font-size: 3.2vw;
+}
+
+.navAnchor:hover{
+    color: #FFA0A3;
+}
+
+.navAnchor > .active{
+    font-family: 'Staatliches', cursive;
+    font-size: 1.8vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    text-decoration: none;
+    color: #FFA0A3;
+}
+
+/* Footer */
+
+.myFooter{
+    background-color: white;
+    min-height: 6vh;
+    padding: 20px;
+    border-top: solid 0.7vh #77DDF9;
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.footerContent > h3{
+    color: #77DDF9;
+    font-size: 5.5vw;
+    font-family: 'Staatliches', cursive;
+}
+
+
+.footerContent > h3 > a > i{
+    color: #77DDF9;
+    font-size: 5vw;
+}
+
+.footerContent > a > i{
+    color: #77DDF9;
+    font-size: 6vw;
+}
+
+/* Homepage */
+
+.myHeroHome{
+    background-image: url(images/hero_home2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 30vw;
+    z-index: 2;
+}
+
+.headMission{
+    color: #016386;
+    font-size: 7vw;
+    text-align: center;
+    padding: 4vw 2vw 2vw 2vw;
+}
+
+.missionStatement{
+    color: #016386;
+    padding: 0vw 8vw 4vw 8vw;
+    text-align: left;
+    font-size: 5vw;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.myCard{
+    margin: 8vw;
+    background-color: #FFA0A3;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.readMore{
+    font-family: 'Noto Sans Display', sans-serif;
+    text-decoration: none;
+    vertical-align: middle;
+    color: white;
+}
+
+.readMore:hover{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mtp{
+    font-size: 1.3rem;
+}
+
+.myArrow{
+    color: white;
+    font-size: 5vw;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.buttonHome{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.buttonHome:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.myBanner{
+    background-color:#77DDF9;
+    min-height: 5.5vw;
+    padding: 1vw;
+}
+
+.myHero{
+    font-family: 'Noto Sans Display', sans-serif;
+    font-weight: bolder;
+    font-size: 10vw;
+    background-color:#77DDF9;
+    color: white;
+    min-height: 50vw;
+    padding: 20px;
+    padding-left: 5.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.myVideo{
+    background-color: rgb(255, 130, 130);
+    min-height: 300px;
+    margin: 20px 10px;
+    padding: 20px;
+}
+
+/* Meet the Prefects */
+
+.channelPage{
+    position: relative;
+    z-index: 3;
+}
+
+.jump-to-top{ 
+    position: fixed;
+    top: 70px;
+    right: 5px;
+    transition: 0.5s;
+    z-index: 1;
+    font-size: 3rem;
+    color: #77DDF9;
+    padding-top: 0.7rem;
+}
+
+.jump-to-top:hover{
+    color: #FFA0A3;
+}
+
+.myPrefectCard{
+    margin: 3vw;
+    background-color: #FFA0A3;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.myCardTitle{
+     font-size: 6vw;
+}
+
+.myCardText{
+    font-size: 3.5vw;
+}
+
+.myProfileContent{
+    color: #3e444e;
+    min-height: 540px;
+    margin: 20px 10px;
+    padding: 20px;
+}
+
+.myProfileImage{
+    min-width: 15vw;
+    padding: 2rem;
+}
+
+/* Video Page */
+
+.heightVideo{
+    height: 50vh;
+    padding: 2rem;
+}
+
+.modal-title{
+    color: #77DDF9;
+    font-weight: bold;
+    font-size: 4vw;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}  
+
+.videoCard{
+    flex: 0 0 auto;
+    margin: 2rem;
+}
+
+/* Gallery */
+.backgroundB{
+    background-color: #EAFBFF;
+}
+
+.carousel-inner div {
+    object-fit: cover;
+}
+
+.heightImage{
+    width: 100;
+    max-height: 30vh;
+    padding: 2rem;
+}
+
+.myButton{
+    background-color: #77DDF9;
+    background-size: 50%;
+    background-position: center;
+    border-radius: 100%;
+    width: 7vw;
+    height: 7vw;
+    padding: 1vw;
+}
+
+.linkGallery{
+    color: #77DDF9;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 4vw;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.linkGallery:hover{
+    color: #77DDF9;
+    text-decoration: underline;
+}
+
+.linkArrow{
+    color:#77DDF9;
+    font-size: 5vw;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+/* Medium devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .jump-to-top{
+        top: 90px;
+        right: 10px
+    }
+
+    .heightImage{
+        width: 100;
+        max-height: 50vh;
+        padding: 2rem;
+    }
+}
+
+/* Medium devices (landscape phones, 768px and up) */
+@media (min-width: 768px) { 
+
+    h2{
+        color: #77DDF9;
+        font-size: 4vw;
+        font-family: 'Staatliches', cursive;
+    }
+    
+    h3{
+        font-size: 3vw;
+    }
+
+    h5{
+        font-size: 2.1vw;
+    }
+    
+    h6{
+        font-size: 1.5vw;
+    }
+
+    .navTopHome{
+        display: block;
+        background-color: white;
+        position: relative;
+        z-index: 5;
+    }
+
+    .introBox{
+        margin-top: 0;;
+    }
+    
+
+    .navAnchorHome{
+        font-size: 2vw;
+    }
+
+    .navAnchorLogo{
+        font-size: 3vw;
+    }
+
+    .nav-link{
+        font-size: 1.5vw;
+    }
+
+    .myHero{
+        font-size: 5vw;
+        min-height: 22vw;
+        padding-left: 5.3vw;
+    }
+
+    .footerContent > h3{
+        color: #77DDF9;
+        font-size: 3vw;
+        font-family: 'Staatliches', cursive;
+    }    
+
+    .footerContent > h3 > a > i{
+        color: #77DDF9;
+        font-size: 2.5vw;
+    }
+    
+    .footerContent > a > i{
+        color: #77DDF9;
+        font-size: 3vw;
+    }
+
+    .myHeroHome{
+        min-height: 37vw;
+    }
+
+    .headMission{
+        font-size: 4.5vw;
+    }
+    
+    .missionStatement{
+        font-size: 3vw;
+    }
+
+    .myArrow{
+        font-size: 2vw;
+    }
+    
+    .jump-to-top{ 
+        top: 85px;
+        right: 10px;
+    }
+
+    .myCardTitle{
+        font-size: 3.3vw;
+    }
+
+    .myCardText{
+        font-size: 1.8vw;
+    }
+
+    .linkGallery{
+        font-size: 2vw;
+    }
+
+    .linkArrow{
+        font-size: 3vw;
+    }
+
+    .modal-title{
+        font-size: 2vw;
+    }
+}
+
+/* Medium devices (iPads, Laptops, 990px and up) */
+@media (min-width: 990px) { 
+
+    .myCardTitle{
+        font-size: 2.5vw;
+    }
+
+    .myCardText{
+        font-size: 1.3vw;
+    }
+
+    .myButton{
+        background-color: #77DDF9;
+        background-size: 50%;
+        background-position: center;
+        border-radius: 100%;
+        width: 5vw;
+        height: 5vw;
+        padding: 1vw;
+    }
+}

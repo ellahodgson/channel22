@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Channel 22</title>
+    <link rel="icon" href="icons/hearts.svg">
+    <!--This is the bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--Bootstrap icons link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!--This is my custom CSS-->
+    <link rel="stylesheet" href="style.css">    
+</head>
+
+    <body style="overflow-x: hidden;">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top navHome">
+            <div class="container-fluid">
+                <a class="navbar-brand navAnchorLogo" href="index.html" aria-current="page">CHANNEL 22</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end navCollapseIcon" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a id="active" class="nav-link navAnchor" aria-current="page" href="index.html">HOME</a>
+                      <a class="nav-link navAnchor" href="meet_the_prefects.html">MEET THE PREFECTS</a>
+                      <a class="nav-link navAnchor" href="initiatives.html">INITIATIVES</a>
+                      <a class="nav-link navAnchor" href="videos.html">VIDEOS</a>
+                      <a class="nav-link navAnchor" href="gallery.html">GALLERY</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="container-fluid m-0 p-0 navTopHome">
+            <div class="row">
+                <div class="col">
+                    <div class="navLeadHome py-1">
+                        <h1>CHANNEL 22</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-start navContentHome">
+                <div class="col-3">
+                    <div><a href="meet_the_prefects.html" class="navAnchorHome">MEET THE PREFECTS</a></div>
+                </div>
+                <div class="col-3">
+                    <div><a href="initiatives.html" class="navAnchorHome">INITIATIVES</a></div>
+                </div>
+                <div class="col-3">
+                    <div><a href="videos.html" class="navAnchorHome">VIDEOS</a></div>
+                </div>
+                <div class="col-3">
+                    <div><a href="gallery.html" class="navAnchorHome">GALLERY</a></div>
+                </div> 
+            </div>
+        </nav>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="myBox3 introBox">
+                        <h3>Welcome!</h3><br>
+                        <p>Hey everyone! Welcome to the hub for Channel 22 - lead by the St Hilda’s Prefects for 2022. 
+                        We will be tuning in throughout the year to share all the positive headlines and news that occurs in and around our school community. 
+                        We hope that this site can be a place where you learn more about us and what we’re working on throughout this year. Our aim is to create memories by focusing on the little things in what are such uncertain times. 
+                        <br>
+                        <br>
+
+                        Lots of love,<br>
+                        The 2022 Prefects &#128153;
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="myBox3 justify-content-center">
+                        <img src="images/IMG_9892.png" class="image-fluid w-100" alt="Prefect Team Pic">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container-fluid m-0 p-0">
+            <div class="row myBanner">
+                <div class="col-3 text-center">
+                    <h4>BE YOU</h4>
+                </div>
+                <div class="col-3 text-center">
+                    <h4>CAN DO</h4>
+                </div>
+                <div class="col-3 text-center">
+                    <h4>BETTER TOGETHER</h4>
+                </div>
+                <div class="col-3 text-center">
+                    <h4>EXPLORE FAITH</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="myHeroHome">
+                        <h3 class="headMission">Our Mission</h3>
+                        <h4 class="missionStatement">“We will create memories we can all cherish and share happiness in the little things by embracing individuality, building the sisterhood and developing connections within and around our community”</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="app-home">
+            <div class="d-flex row justify-content-center">
+                <div v-for="item in items" :class="['col col-8 col-md-4 col-lg-3 mx-lg-4']">
+                    <div class="card border-light d-block h-auto mx-auto myCard">
+                        <img class="card-img-top w-100" :src="item['fields']['imageURL'][0]['url']" alt="item['fields]['altText']">
+                        <div class="card-body h-100">
+                          <h5 class="card-title">{{ item['fields']['title'] }}</h5>
+                          <p class="card-text text-white">{{ item['fields']['blurb'] }}</p>
+                        </div>
+                        <div class="card-footer h-70 bg-transparent border-top-0">
+                            <a :href="item['fields']['linkID']" class="readMore">Read More<i class="bi bi-arrow-right-short myArrow"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-4">
+                    <h2 class="text-center p-1 pt-5">Social Media</h2>
+                </div>
+
+                <div id="curator-feed-default-feed-layout">
+                    <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid m-0 p-0">
+            <div class="row justify-content-center myFooter">
+                <div class="col-3 col-lg-3 col-xl-2 d-flex justify-content-center">
+                    <div class="footerContent">
+                        <a href="index.html" class="text-decoration-none"><h2 class="p-0 m-0">22</h2></a>
+                    </div>
+                </div>
+    
+                <div class="col-7 col-lg-6 col-xl-8 d-flex justify-content-center">
+                    <div class="footerContent"><h3 class="p-0 pt-2 m-0">Follow Us - <a href="https://www.instagram.com/sthildascollegiate/?hl=en" target="_blank"><i class="bi bi-instagram"></i></a>   <a href="https://www.facebook.com/SHCSNZ/" target="_blank"><i class="bi bi-facebook"></i></a>    <a href="https://vt.tiktok.com/ZSdq7QqYm/" target="_blank"><i class="bi bi-tiktok"></i></a></h3>
+                    </div>
+                </div>
+                <div class="col-2 col-lg-3 col-xl-2 d-flex justify-content-center">
+                    <div class="footerContent"><a href="#top"><i class="bi bi-arrow-up-circle-fill"></i></a></div>
+                </div>
+            </div>
+        </div>  
+        
+        <!--Bootstrap Script-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+        <!-- Curator Javascript -->
+        <script type="text/javascript">
+        /* curator-feed-default-feed-layout */
+         (function(){
+         var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+         i.src="https://cdn.curator.io/published/08e99e52-3fa3-4517-b7c2-4488f983b532.js";
+         e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+         })();
+        </script>
+        
+        <!-- JS for VUE and Airtable -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+        <!-- Custom JS-->
+        <script src="home_vue.js"></script>
+
+    </body>
+</html>
