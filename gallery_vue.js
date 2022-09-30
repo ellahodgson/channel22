@@ -88,6 +88,13 @@ var app = new Vue({
             })
         },
         
+        filteredFunDay: function () {
+            return this.items.filter(function (filteredItem) {
+                return filteredItem.fields.iD == "Fun Day"
+
+            })
+        },
+        
     }
 
 });
