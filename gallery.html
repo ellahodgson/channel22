@@ -244,6 +244,35 @@
          
           </div>
 
+          <div class="row">
+            <h3 class="pt-4 ps-5">Fun Day 2022</h3>
+
+            <div id="carouselExampleInterval8" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                  <img src="images/channel_22_galleries/Fun_Day/DSC_0098.jpg" class="d-block image-fluid mx-auto heightImage" alt="Picture from Prefect Fun Day">
+                </div>
+                <div v-for="item in filteredFunDay"> 
+                  <div class="carousel-item" data-bs-interval="5000">
+                    <img class="d-block image-fluid mx-auto heightImage" :src="item['fields']['imageURL'][0]['url']" :alt="item['fields']['Alt']" :title="item['fields']['Alt']">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval8" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon myButton" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval8" data-bs-slide="next">
+                  <span class="carousel-control-next-icon myButton" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>      
+        
+            <cite class="text-center">Photos taken by Lily Knox and Belle King-Begg</cite>
+            <a class="linkGallery" href="https://drive.google.com/drive/folders/14LvS6LRvEIcDoBm312FfV9HrR8IW02jZ?usp=sharing" target="_blank">Check out the full gallery here!<i class="bi bi-arrow-right-short linkArrow"></i></a>
+       
+        </div>
+
             <div class="row justify-content-center">
                 <h3 class="text-center p-5">Stayed tuned! More photos will be added as the year goes on</h3>
             </div>
