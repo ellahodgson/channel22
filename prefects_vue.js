@@ -71,7 +71,7 @@ var profileApp = new Vue({
     methods: {
         loadItems: function () {
 
-            // Init variables from airatble
+            // Init variables from airtable
             var self = this
             var app_id = "appOpceGFpZ8Snpb7";
             var app_token = "patCPZ4jbJt22sr8e.75096c9e5c5f52be852a9beb67a17938248fc950fec0b0d6bc1b44b41802bccf";
